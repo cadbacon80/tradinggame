@@ -1,0 +1,192 @@
+[
+  {
+    "id": "fzzl-pickle-soda",
+    "headline": "FZZL launches sparkling pickle soda. Sales bubble up.",
+    "emoji": "🥒",
+    "effects": [{ "target": { "ticker": "FZZL" }, "pct": 0.12 }]
+  },
+  {
+    "id": "fzzl-recall",
+    "headline": "FZZL recalls sparkling broth. Customers unsurprised.",
+    "emoji": "🥣",
+    "effects": [{ "target": { "ticker": "FZZL" }, "pct": -0.09 }]
+  },
+  {
+    "id": "fzzl-mascot",
+    "headline": "FZZL mascot fights a vending machine. Wins.",
+    "emoji": "🥤",
+    "effects": [{ "target": { "ticker": "FZZL" }, "pct": 0.04 }]
+  },
+  {
+    "id": "fzzl-sugar-tax",
+    "headline": "Surprise sugar tax. FZZL feels the pinch.",
+    "emoji": "🍬",
+    "effects": [{ "target": { "ticker": "FZZL" }, "pct": -0.07 }, { "target": "market", "pct": -0.01 }]
+  },
+  {
+    "id": "bark-cat-hack",
+    "headline": "A stray cat hacks BARK servers. Stock chases its tail.",
+    "emoji": "🐱",
+    "effects": [{ "target": { "ticker": "BARK" }, "pct": -0.08 }, { "target": "market", "pct": -0.01 }]
+  },
+  {
+    "id": "bark-influencer",
+    "headline": "Dog influencer endorses BARK kibble. Subscribers howl.",
+    "emoji": "🐕",
+    "effects": [{ "target": { "ticker": "BARK" }, "pct": 0.10 }]
+  },
+  {
+    "id": "bark-treat-shortage",
+    "headline": "Liver treat shortage rocks BARK supply chain.",
+    "emoji": "🍖",
+    "effects": [{ "target": { "ticker": "BARK" }, "pct": -0.06 }]
+  },
+  {
+    "id": "moon-sunscreen",
+    "headline": "MOON tourist forgets sunscreen on the Sun. CEO unfazed.",
+    "emoji": "🌞",
+    "effects": [{ "target": { "ticker": "MOON" }, "pct": 0.02 }]
+  },
+  {
+    "id": "moon-launch-success",
+    "headline": "MOON nails a flawless launch. Window seats sold out.",
+    "emoji": "🚀",
+    "effects": [{ "target": { "ticker": "MOON" }, "pct": 0.13 }]
+  },
+  {
+    "id": "moon-delay",
+    "headline": "MOON delays launch over 'concerning seagull'. Investors squawk.",
+    "emoji": "🕊️",
+    "effects": [{ "target": { "ticker": "MOON" }, "pct": -0.10 }]
+  },
+  {
+    "id": "moon-bezos-pet",
+    "headline": "Billionaire books MOON trip for his dog. BARK applauds.",
+    "emoji": "🐩",
+    "effects": [
+      { "target": { "ticker": "MOON" }, "pct": 0.06 },
+      { "target": { "ticker": "BARK" }, "pct": 0.04 }
+    ]
+  },
+  {
+    "id": "crsp-geese-fly",
+    "headline": "CRSP geese learn to file taxes. Investors call it disruptive.",
+    "emoji": "🦢",
+    "effects": [{ "target": { "ticker": "CRSP" }, "pct": 0.09 }]
+  },
+  {
+    "id": "crsp-fda",
+    "headline": "FDA pauses CRSP trial after a goose 'gave notes'.",
+    "emoji": "🦆",
+    "effects": [{ "target": { "ticker": "CRSP" }, "pct": -0.11 }]
+  },
+  {
+    "id": "crsp-breakthrough",
+    "headline": "CRSP cures lactose intolerance in goats. Stock leaps.",
+    "emoji": "🐐",
+    "effects": [{ "target": { "ticker": "CRSP" }, "pct": 0.14 }]
+  },
+  {
+    "id": "drip-shortage",
+    "headline": "Coffee shortage rumor brews. DRIP panics, baristas weep.",
+    "emoji": "☕",
+    "effects": [{ "target": { "ticker": "DRIP" }, "pct": -0.10 }]
+  },
+  {
+    "id": "drip-oat-milk",
+    "headline": "DRIP debuts oat-milk-of-the-month club. Subscriptions froth.",
+    "emoji": "🥛",
+    "effects": [{ "target": { "ticker": "DRIP" }, "pct": 0.08 }]
+  },
+  {
+    "id": "drip-spill",
+    "headline": "Tanker of cold brew spills off Long Beach. Seagulls jittery.",
+    "emoji": "🌊",
+    "effects": [{ "target": { "ticker": "DRIP" }, "pct": -0.05 }, { "target": "market", "pct": -0.01 }]
+  },
+  {
+    "id": "drip-celebrity",
+    "headline": "Pop star orders DRIP latte. Line wraps around the block.",
+    "emoji": "🎤",
+    "effects": [{ "target": { "ticker": "DRIP" }, "pct": 0.07 }]
+  },
+  {
+    "id": "market-regulator-dunk",
+    "headline": "Regulator dunks on crypto. Equities rattle in sympathy.",
+    "emoji": "🏛️",
+    "effects": [{ "target": "market", "pct": -0.04 }]
+  },
+  {
+    "id": "market-rate-cut",
+    "headline": "Central bank surprise rate cut. Everyone parties.",
+    "emoji": "🎉",
+    "effects": [{ "target": "market", "pct": 0.05 }]
+  },
+  {
+    "id": "market-warm-cpi",
+    "headline": "CPI runs hot. Markets pretend to be calm.",
+    "emoji": "🥵",
+    "effects": [{ "target": "market", "pct": -0.03 }]
+  },
+  {
+    "id": "market-good-jobs",
+    "headline": "Jobs report stunner. Indices stage a victory lap.",
+    "emoji": "💼",
+    "effects": [{ "target": "market", "pct": 0.04 }]
+  },
+  {
+    "id": "market-blackout",
+    "headline": "Exchange briefly halted by a squirrel chewing a cable.",
+    "emoji": "🐿️",
+    "effects": [{ "target": "market", "pct": -0.02 }]
+  },
+  {
+    "id": "market-meme",
+    "headline": "Mystery TikTok dance pumps every consumer stock in sight.",
+    "emoji": "📱",
+    "effects": [
+      { "target": { "ticker": "FZZL" }, "pct": 0.05 },
+      { "target": { "ticker": "DRIP" }, "pct": 0.05 }
+    ]
+  },
+  {
+    "id": "market-rally",
+    "headline": "Analyst predicts 'vibes recession'. Stocks ironically rally.",
+    "emoji": "📈",
+    "effects": [{ "target": "market", "pct": 0.03 }]
+  },
+  {
+    "id": "market-credit",
+    "headline": "Credit spreads widen overnight. Cautious tape ahead.",
+    "emoji": "📉",
+    "effects": [{ "target": "market", "pct": -0.05 }]
+  },
+  {
+    "id": "flavor-intern",
+    "headline": "Intern leaves stove on at the NYSE. Trading continues.",
+    "emoji": "🔥",
+    "effects": [],
+    "flavorOnly": true
+  },
+  {
+    "id": "flavor-pigeon",
+    "headline": "Pigeon roosts on the bull statue. Becomes new index mascot.",
+    "emoji": "🕊️",
+    "effects": [],
+    "flavorOnly": true
+  },
+  {
+    "id": "flavor-rooftop",
+    "headline": "Hedge fund holds yoga on the rooftop. Nobody is calmer.",
+    "emoji": "🧘",
+    "effects": [],
+    "flavorOnly": true
+  },
+  {
+    "id": "flavor-cab",
+    "headline": "Taxi driver gives stock tips. They are unfortunately correct.",
+    "emoji": "🚕",
+    "effects": [],
+    "flavorOnly": true
+  }
+]
