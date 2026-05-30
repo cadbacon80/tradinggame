@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useGame } from '../../state/gameStore';
 import { usePlayer } from '../../state/playerStore';
+import { SESSION_PRESETS, DEFAULT_SESSION, type SessionSize } from '../../game/config';
 
 const EMOJIS = ['🐱','🐶','🦊','🐼','🐸','🐙','🦄','🐝','🦖','🐢','🐧','🦔','🦦','🐹','🦇','🦋','🦩','🌶️','🥑','🥨','🍿','🌮','🍣','🐂'];
 
@@ -9,17 +10,18 @@ export function HostConfig() {
   const { id, name, emoji, setIdentity } = usePlayer();
   const [localName, setLocalName] = useState(name);
   const [localEmoji, setLocalEmoji] = useState(emoji);
-  const [rounds, setRounds] = useState(8);
+  const [session, setSession] = useState<SessionSize>(DEFAULT_SESSION);
   const [tradingSeconds, setTradingSeconds] = useState(30);
 
   function create() {
     const trimmed = localName.trim() || 'Host';
     setIdentity(trimmed.slice(0, 12), localEmoji);
+    const rounds = SESSION_PRESETS[session].totalRounds;
     createOfflineRoom(
       { id, name: trimmed.slice(0, 12), emoji: localEmoji },
       { totalRounds: rounds, tradingSeconds },
     );
-    pushToast(`Room ready. ${rounds} rounds, ${tradingSeconds}s trading.`);
+    pushToast(`${SESSION_PRESETS[session].label} session: ${rounds} rounds, ${tradingSeconds}s trading.`);
   }
 
   return (
@@ -60,18 +62,38 @@ export function HostConfig() {
         </div>
 
         <div>
-          <div className="flex items-baseline justify-between">
-            <span className="text-sm text-slate-400">Rounds</span>
-            <span className="tabular text-lg font-semibold">{rounds}</span>
+          <div className="text-sm text-slate-400 mb-2">Session size</div>
+          <div className="flex flex-col gap-2">
+            {(Object.keys(SESSION_PRESETS) as SessionSize[]).map((key) => {
+              const p = SESSION_PRESETS[key];
+              const selected = session === key;
+              return (
+                <button
+                  key={key}
+                  onClick={() => setSession(key)}
+                  className={
+                    'flex items-center justify-between rounded-xl px-4 py-3 text-left transition active:scale-[0.99] ' +
+                    (selected
+                      ? 'bg-green-500 text-slate-950 ring-2 ring-green-300'
+                      : 'bg-slate-900 text-slate-100')
+                  }
+                >
+                  <div>
+                    <div className="font-bold">{p.label}</div>
+                    <div className={'text-xs ' + (selected ? 'text-slate-800' : 'text-slate-400')}>
+                      {p.description}
+                    </div>
+                  </div>
+                  <div className="text-right">
+                    <div className="tabular text-lg font-bold">{p.totalRounds}</div>
+                    <div className={'text-xs ' + (selected ? 'text-slate-800' : 'text-slate-500')}>
+                      {p.estimatedMinutes}
+                    </div>
+                  </div>
+                </button>
+              );
+            })}
           </div>
-          <input
-            type="range"
-            min={5}
-            max={10}
-            value={rounds}
-            onChange={(e) => setRounds(Number(e.target.value))}
-            className="w-full"
-          />
         </div>
 
         <div>

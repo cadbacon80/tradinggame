@@ -66,21 +66,50 @@ export const INSURANCE: InsuranceConfig = {
   noisePct: 0.03,
 };
 
+/** Insurance opens every other round starting at round 3, up to totalRounds−1. */
+export function defaultInsuranceRounds(totalRounds: number): number[] {
+  const out: number[] = [];
+  for (let r = 3; r < totalRounds; r += 2) out.push(r);
+  return out;
+}
+
+export type SessionSize = 'small' | 'medium' | 'large';
+
+export interface SessionPreset {
+  label: string;
+  totalRounds: number;
+  estimatedMinutes: string;
+  description: string;
+}
+
+export const SESSION_PRESETS: Record<SessionSize, SessionPreset> = {
+  small:  { label: 'Small',  totalRounds: 5,  estimatedMinutes: '~6 min',  description: 'Snappy. One insurance window.' },
+  medium: { label: 'Medium', totalRounds: 8,  estimatedMinutes: '~10 min', description: 'Standard. Three insurance windows.' },
+  large:  { label: 'Large',  totalRounds: 12, estimatedMinutes: '~15 min', description: 'Long. Five insurance windows.' },
+};
+
+export const DEFAULT_SESSION: SessionSize = 'medium';
+
 export const DEFAULT_CONFIG: Omit<GameConfig, 'seed'> = {
-  totalRounds: 8,
+  totalRounds: SESSION_PRESETS[DEFAULT_SESSION].totalRounds,
   tradingSeconds: 30,
   newsRevealSeconds: 5,
   resolutionSeconds: 6,
   startingCash: 1500,
   lotSize: 5,
-  insuranceRounds: [3, 5, 7],
+  insuranceRounds: defaultInsuranceRounds(SESSION_PRESETS[DEFAULT_SESSION].totalRounds),
   tickers: TICKERS,
   insurance: INSURANCE,
   stockNoisePct: 0.02,
 };
 
 export function makeConfig(seed: string, overrides: Partial<GameConfig> = {}): GameConfig {
-  return { ...DEFAULT_CONFIG, seed, ...overrides };
+  // If caller overrides totalRounds but not insuranceRounds, scale the windows.
+  const next = { ...DEFAULT_CONFIG, seed, ...overrides };
+  if (overrides.totalRounds != null && overrides.insuranceRounds == null) {
+    next.insuranceRounds = defaultInsuranceRounds(next.totalRounds);
+  }
+  return next;
 }
 
 export const MAX_PER_ROUND_PCT = 0.25;
