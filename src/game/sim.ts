@@ -130,9 +130,7 @@ function main() {
     startingCash = r.startingCash;
   }
 
-  // eslint-disable-next-line no-console
   console.log(`\nSimulation: ${games} games, starting cash ${startingCash}\n`);
-  // eslint-disable-next-line no-console
   console.log(`Win rate:  long ${(wins.long / games * 100).toFixed(1)}%   cash ${(wins.cash / games * 100).toFixed(1)}%   insurance ${(wins.insurance / games * 100).toFixed(1)}%`);
 
   for (const [label, xs] of [['long', netLong], ['cash', netCash], ['insurance', netIns]] as const) {
@@ -140,7 +138,6 @@ function main() {
     const p10 = quantile(xs, 0.1);
     const p50 = quantile(xs, 0.5);
     const p90 = quantile(xs, 0.9);
-    // eslint-disable-next-line no-console
     console.log(`${label.padEnd(10)} mean=${mn.toFixed(0)}  p10=${p10.toFixed(0)}  p50=${p50.toFixed(0)}  p90=${p90.toFixed(0)}  mult=${(mn / startingCash).toFixed(2)}x`);
   }
 }
