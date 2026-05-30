@@ -21,15 +21,15 @@ describe('economy.updateMarket', () => {
     const prev = initialPrices(config);
     const news: NewsItem[] = [{
       id: 'boost-fzzl',
-      headline: 'FZZL doubles',
+      headline: 'BYTE doubles',
       emoji: '🚀',
-      effects: [{ target: { ticker: 'FZZL' }, pct: 0.20 }],
+      effects: [{ target: { ticker: 'BYTE' }, pct: 0.20 }],
     }];
     // Use a noise-free RNG (we accept noise but average across runs).
     let positive = 0;
     for (let i = 0; i < 50; i++) {
       const update = updateMarket(config, prev, 25, news, new RNG(`r-${i}`));
-      if (update.prices['FZZL']! > prev['FZZL']!) positive += 1;
+      if (update.prices['BYTE']! > prev['BYTE']!) positive += 1;
     }
     expect(positive).toBeGreaterThanOrEqual(45);
   });
@@ -86,10 +86,10 @@ describe('economy.updateMarket', () => {
       id: 'huge',
       headline: 'huge',
       emoji: '💥',
-      effects: [{ target: { ticker: 'FZZL' }, pct: 5.0 }],
+      effects: [{ target: { ticker: 'BYTE' }, pct: 5.0 }],
     }];
     const update = updateMarket(config, prev, 25, huge, new RNG('cap'));
-    const r = (update.prices['FZZL']! - prev['FZZL']!) / prev['FZZL']!;
+    const r = (update.prices['BYTE']! - prev['BYTE']!) / prev['BYTE']!;
     // 25% cap plus drift plus noise — ~30% upper bound
     expect(r).toBeLessThan(0.35);
   });

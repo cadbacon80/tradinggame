@@ -90,7 +90,7 @@ describe('engine — orders', () => {
   it('rejects orders outside the trading phase', () => {
     let room = freshRoom();
     room = startGame(room, 0); // news
-    const r = placeOrder(room, { playerId: host.id, kind: 'stock', ticker: 'FZZL', side: 'buy' });
+    const r = placeOrder(room, { playerId: host.id, kind: 'stock', ticker: 'BYTE', side: 'buy' });
     expect(r.error).toMatch(/trading/i);
   });
 
@@ -99,17 +99,17 @@ describe('engine — orders', () => {
     room = startGame(room, 0);
     room = advancePhase(room, 0); // trading
     const startCash = room.players[host.id]!.cash;
-    const price = room.market.prices['FZZL']!;
-    const r1 = placeOrder(room, { playerId: host.id, kind: 'stock', ticker: 'FZZL', side: 'buy' });
+    const price = room.market.prices['BYTE']!;
+    const r1 = placeOrder(room, { playerId: host.id, kind: 'stock', ticker: 'BYTE', side: 'buy' });
     expect(r1.error).toBeUndefined();
     room = r1.room;
     expect(room.players[host.id]!.cash).toBe(startCash - price * room.config.lotSize);
-    expect(room.players[host.id]!.holdings['FZZL']).toBe(room.config.lotSize);
-    const r2 = placeOrder(room, { playerId: host.id, kind: 'stock', ticker: 'FZZL', side: 'sell' });
+    expect(room.players[host.id]!.holdings['BYTE']).toBe(room.config.lotSize);
+    const r2 = placeOrder(room, { playerId: host.id, kind: 'stock', ticker: 'BYTE', side: 'sell' });
     expect(r2.error).toBeUndefined();
     room = r2.room;
     expect(room.players[host.id]!.cash).toBe(startCash);
-    expect(room.players[host.id]!.holdings['FZZL']).toBe(0);
+    expect(room.players[host.id]!.holdings['BYTE']).toBe(0);
   });
 
   it('rejects buy if insufficient cash', () => {
@@ -117,7 +117,7 @@ describe('engine — orders', () => {
     room = startGame(room, 0);
     room = advancePhase(room, 0);
     room = { ...room, players: { ...room.players, [host.id]: { ...room.players[host.id]!, cash: 1 } } };
-    const r = placeOrder(room, { playerId: host.id, kind: 'stock', ticker: 'FZZL', side: 'buy' });
+    const r = placeOrder(room, { playerId: host.id, kind: 'stock', ticker: 'BYTE', side: 'buy' });
     expect(r.error).toMatch(/cash/i);
   });
 

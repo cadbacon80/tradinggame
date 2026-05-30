@@ -6,6 +6,10 @@ export interface TickerConfig {
   id: TickerId;
   name: string;
   sector: string;
+  /** Short company logo emoji shown next to the ticker tag. */
+  emoji: string;
+  /** One-line "what they do" backstory, shown in the info sheet. */
+  description: string;
   startPrice: number;
   drift?: number;
 }

@@ -15,50 +15,58 @@ export function InsuranceCard({ room, player, canTrade, onBuy, onSell }: Props) 
   const canBuy = canTrade && open && player.cash >= price;
   const canSell = canTrade && open && held > 0;
 
-  // Find the next round in config.insuranceRounds that's >= current round + 1
   const upcoming = room.config.insuranceRounds.find((r) => r > room.round);
   const helper = open
-    ? 'Open this round'
+    ? 'Window is OPEN this round'
     : upcoming
-      ? `Opens round ${upcoming}`
-      : 'Closed for this game';
+      ? `Window opens round ${upcoming}`
+      : 'No more windows this game';
 
   return (
-    <div className={'card flex flex-col gap-3 ' + (open ? 'ring-2 ring-amber-400' : '')}>
+    <div
+      className={
+        'card flex flex-col gap-3 ' +
+        (open ? 'ring-2 ring-amber-400 shadow-[0_0_24px_rgba(251,191,36,0.25)]' : '')
+      }
+    >
       <div className="flex items-center justify-between">
-        <div>
-          <div className="font-bold tracking-wide">INS</div>
-          <div className="text-xs text-slate-400">Volatility hedge</div>
+        <div className="flex items-center gap-3">
+          <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-amber-500 text-xl">
+            🛡️
+          </span>
+          <div>
+            <div className="flex items-center gap-2">
+              <span className="font-bold tracking-wide">INS</span>
+              <span className="rounded bg-slate-800 px-1.5 py-0.5 text-[10px] uppercase tracking-wider text-slate-400">
+                vol
+              </span>
+            </div>
+            <div className="text-xs text-slate-400">Pops on big swings</div>
+          </div>
         </div>
         <div className="text-right">
-          <div className="tabular text-xl font-bold">{price}</div>
-          <div className="tabular text-xs text-slate-400">{held} units</div>
+          <div className="tabular text-2xl font-bold">{price}</div>
+          <div className="tabular text-xs text-slate-500">{held} units</div>
         </div>
       </div>
-      <div className="flex items-center justify-between gap-2">
-        <span
-          className={
-            'text-xs ' + (open ? 'text-amber-300' : 'text-slate-500')
-          }
+      <div className={'text-xs ' + (open ? 'text-amber-300' : 'text-slate-500')}>
+        {helper}
+      </div>
+      <div className="flex gap-2">
+        <button
+          disabled={!canSell}
+          onClick={onSell}
+          className="flex-1 rounded-xl bg-red-500/15 px-3 py-2 text-sm font-bold text-red-400 active:scale-95 disabled:opacity-30 disabled:active:scale-100"
         >
-          {helper}
-        </span>
-        <div className="flex gap-1">
-          <button
-            disabled={!canSell}
-            onClick={onSell}
-            className="rounded-lg bg-slate-800 px-3 py-1.5 text-sm font-semibold text-red-400 disabled:opacity-30"
-          >
-            −1
-          </button>
-          <button
-            disabled={!canBuy}
-            onClick={onBuy}
-            className="rounded-lg bg-slate-800 px-3 py-1.5 text-sm font-semibold text-amber-300 disabled:opacity-30"
-          >
-            +1
-          </button>
-        </div>
+          SELL 1
+        </button>
+        <button
+          disabled={!canBuy}
+          onClick={onBuy}
+          className="flex-1 rounded-xl bg-amber-500/25 px-3 py-2 text-sm font-bold text-amber-300 active:scale-95 disabled:opacity-30 disabled:active:scale-100"
+        >
+          BUY 1
+        </button>
       </div>
     </div>
   );

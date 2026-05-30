@@ -1,45 +1,9 @@
 [
   {
-    "id": "fzzl-pickle-soda",
-    "headline": "FZZL launches sparkling pickle soda. Sales bubble up.",
-    "emoji": "🥒",
-    "effects": [{ "target": { "ticker": "FZZL" }, "pct": 0.12 }]
-  },
-  {
-    "id": "fzzl-recall",
-    "headline": "FZZL recalls sparkling broth. Customers unsurprised.",
-    "emoji": "🥣",
-    "effects": [{ "target": { "ticker": "FZZL" }, "pct": -0.09 }]
-  },
-  {
-    "id": "fzzl-mascot",
-    "headline": "FZZL mascot fights a vending machine. Wins.",
-    "emoji": "🥤",
-    "effects": [{ "target": { "ticker": "FZZL" }, "pct": 0.04 }]
-  },
-  {
-    "id": "fzzl-sugar-tax",
-    "headline": "Surprise sugar tax. FZZL feels the pinch.",
-    "emoji": "🍬",
-    "effects": [{ "target": { "ticker": "FZZL" }, "pct": -0.07 }, { "target": "market", "pct": -0.01 }]
-  },
-  {
-    "id": "bark-cat-hack",
-    "headline": "A stray cat hacks BARK servers. Stock chases its tail.",
-    "emoji": "🐱",
-    "effects": [{ "target": { "ticker": "BARK" }, "pct": -0.08 }, { "target": "market", "pct": -0.01 }]
-  },
-  {
-    "id": "bark-influencer",
-    "headline": "Dog influencer endorses BARK kibble. Subscribers howl.",
-    "emoji": "🐕",
-    "effects": [{ "target": { "ticker": "BARK" }, "pct": 0.10 }]
-  },
-  {
-    "id": "bark-treat-shortage",
-    "headline": "Liver treat shortage rocks BARK supply chain.",
-    "emoji": "🍖",
-    "effects": [{ "target": { "ticker": "BARK" }, "pct": -0.06 }]
+    "id": "moon-launch-success",
+    "headline": "MOON nails a flawless launch. Window seats sold out for the decade.",
+    "emoji": "🚀",
+    "effects": [{ "target": { "ticker": "MOON" }, "pct": 0.13 }]
   },
   {
     "id": "moon-sunscreen",
@@ -48,111 +12,189 @@
     "effects": [{ "target": { "ticker": "MOON" }, "pct": 0.02 }]
   },
   {
-    "id": "moon-launch-success",
-    "headline": "MOON nails a flawless launch. Window seats sold out.",
-    "emoji": "🚀",
-    "effects": [{ "target": { "ticker": "MOON" }, "pct": 0.13 }]
-  },
-  {
     "id": "moon-delay",
-    "headline": "MOON delays launch over 'concerning seagull'. Investors squawk.",
+    "headline": "MOON delays launch over a 'concerning seagull'. Investors squawk.",
     "emoji": "🕊️",
     "effects": [{ "target": { "ticker": "MOON" }, "pct": -0.10 }]
   },
   {
-    "id": "moon-bezos-pet",
-    "headline": "Billionaire books MOON trip for his dog. BARK applauds.",
-    "emoji": "🐩",
+    "id": "moon-meteor",
+    "headline": "MOON ship hit by a marshmallow-sized meteor. Survives. Investors do too.",
+    "emoji": "🪨",
+    "effects": [{ "target": { "ticker": "MOON" }, "pct": -0.04 }]
+  },
+  {
+    "id": "moon-billionaire",
+    "headline": "Billionaire books MOON trip for his dachshund. Adorable. Profitable.",
+    "emoji": "🐕",
+    "effects": [{ "target": { "ticker": "MOON" }, "pct": 0.06 }]
+  },
+
+  {
+    "id": "byte-data-breach",
+    "headline": "BYTE leaks 4 million selfies. CEO says 'they were unflattering anyway.'",
+    "emoji": "📸",
+    "effects": [{ "target": { "ticker": "BYTE" }, "pct": -0.11 }]
+  },
+  {
+    "id": "byte-ai-pet",
+    "headline": "BYTE launches AI pet that judges your posture. Massive preorder.",
+    "emoji": "🤖",
+    "effects": [{ "target": { "ticker": "BYTE" }, "pct": 0.12 }]
+  },
+  {
+    "id": "byte-outage",
+    "headline": "BYTE cloud goes down. Half the internet plays solitaire.",
+    "emoji": "☁️",
+    "effects": [{ "target": { "ticker": "BYTE" }, "pct": -0.07 }, { "target": "market", "pct": -0.01 }]
+  },
+  {
+    "id": "byte-chip-deal",
+    "headline": "BYTE inks chip deal. Engineers throw a server-room party.",
+    "emoji": "🔌",
+    "effects": [{ "target": { "ticker": "BYTE" }, "pct": 0.08 }]
+  },
+
+  {
+    "id": "tlkr-pigeon-strike",
+    "headline": "TLKR carrier pigeons unionize. Deliveries reduced to weekdays.",
+    "emoji": "🕊️",
+    "effects": [{ "target": { "ticker": "TLKR" }, "pct": -0.06 }]
+  },
+  {
+    "id": "tlkr-5g-bird",
+    "headline": "TLKR's new 5G antenna gets a bird's nest. Coverage improves.",
+    "emoji": "📡",
+    "effects": [{ "target": { "ticker": "TLKR" }, "pct": 0.05 }]
+  },
+  {
+    "id": "tlkr-merger",
+    "headline": "TLKR rumored to merge with a vintage telegraph startup. Wires shaking.",
+    "emoji": "📞",
+    "effects": [{ "target": { "ticker": "TLKR" }, "pct": 0.10 }]
+  },
+  {
+    "id": "tlkr-outage",
+    "headline": "TLKR outage strands a million voicemails. Everyone secretly thrilled.",
+    "emoji": "📵",
+    "effects": [{ "target": { "ticker": "TLKR" }, "pct": -0.09 }]
+  },
+
+  {
+    "id": "banx-fish-promotion",
+    "headline": "BANX promotes Larry the goldfish to CFO. Markets approve.",
+    "emoji": "🐟",
+    "effects": [{ "target": { "ticker": "BANX" }, "pct": 0.07 }]
+  },
+  {
+    "id": "banx-rate-hike",
+    "headline": "Rates jump. BANX margins fatten. Tellers smug.",
+    "emoji": "📈",
     "effects": [
-      { "target": { "ticker": "MOON" }, "pct": 0.06 },
-      { "target": { "ticker": "BARK" }, "pct": 0.04 }
+      { "target": { "ticker": "BANX" }, "pct": 0.08 },
+      { "target": "market", "pct": -0.02 }
     ]
   },
   {
-    "id": "crsp-geese-fly",
-    "headline": "CRSP geese learn to file taxes. Investors call it disruptive.",
-    "emoji": "🦢",
-    "effects": [{ "target": { "ticker": "CRSP" }, "pct": 0.09 }]
+    "id": "banx-heist",
+    "headline": "BANX vault burgled. Thieves left a polite note. Stock dips.",
+    "emoji": "🔓",
+    "effects": [{ "target": { "ticker": "BANX" }, "pct": -0.08 }]
   },
   {
-    "id": "crsp-fda",
-    "headline": "FDA pauses CRSP trial after a goose 'gave notes'.",
-    "emoji": "🦆",
-    "effects": [{ "target": { "ticker": "CRSP" }, "pct": -0.11 }]
+    "id": "banx-app",
+    "headline": "BANX app gets emoji reactions. Millennials open accounts en masse.",
+    "emoji": "📱",
+    "effects": [{ "target": { "ticker": "BANX" }, "pct": 0.06 }]
+  },
+
+  {
+    "id": "gold-rush",
+    "headline": "Gold rush rumor in Boise. GOLD trucks roll out, dust everywhere.",
+    "emoji": "⛏️",
+    "effects": [{ "target": { "ticker": "GOLD" }, "pct": 0.11 }]
   },
   {
-    "id": "crsp-breakthrough",
-    "headline": "CRSP cures lactose intolerance in goats. Stock leaps.",
-    "emoji": "🐐",
-    "effects": [{ "target": { "ticker": "CRSP" }, "pct": 0.14 }]
+    "id": "gold-crash",
+    "headline": "Synthetic gold lab leaks blueprint. GOLD slips.",
+    "emoji": "🧪",
+    "effects": [{ "target": { "ticker": "GOLD" }, "pct": -0.10 }]
   },
   {
-    "id": "drip-shortage",
-    "headline": "Coffee shortage rumor brews. DRIP panics, baristas weep.",
-    "emoji": "☕",
-    "effects": [{ "target": { "ticker": "DRIP" }, "pct": -0.10 }]
-  },
-  {
-    "id": "drip-oat-milk",
-    "headline": "DRIP debuts oat-milk-of-the-month club. Subscriptions froth.",
-    "emoji": "🥛",
-    "effects": [{ "target": { "ticker": "DRIP" }, "pct": 0.08 }]
-  },
-  {
-    "id": "drip-spill",
-    "headline": "Tanker of cold brew spills off Long Beach. Seagulls jittery.",
+    "id": "gold-vault-flood",
+    "headline": "Pete's vault floods. Gold's fine. Insurance not.",
     "emoji": "🌊",
-    "effects": [{ "target": { "ticker": "DRIP" }, "pct": -0.05 }, { "target": "market", "pct": -0.01 }]
+    "effects": [{ "target": { "ticker": "GOLD" }, "pct": -0.03 }]
   },
   {
-    "id": "drip-celebrity",
-    "headline": "Pop star orders DRIP latte. Line wraps around the block.",
-    "emoji": "🎤",
-    "effects": [{ "target": { "ticker": "DRIP" }, "pct": 0.07 }]
+    "id": "gold-flight",
+    "headline": "Risk-off mood. Everyone wants GOLD under their mattress.",
+    "emoji": "🛏️",
+    "effects": [{ "target": { "ticker": "GOLD" }, "pct": 0.07 }, { "target": "market", "pct": -0.02 }]
+  },
+
+  {
+    "id": "watt-blackout",
+    "headline": "WATT bottles leak. Citywide blackout. Candles in vogue.",
+    "emoji": "🕯️",
+    "effects": [{ "target": { "ticker": "WATT" }, "pct": -0.09 }, { "target": "market", "pct": -0.02 }]
   },
   {
-    "id": "market-regulator-dunk",
-    "headline": "Regulator dunks on crypto. Equities rattle in sympathy.",
+    "id": "watt-solar-deal",
+    "headline": "WATT acquires a solar startup. Stock catches sunlight.",
+    "emoji": "☀️",
+    "effects": [{ "target": { "ticker": "WATT" }, "pct": 0.11 }]
+  },
+  {
+    "id": "watt-heatwave",
+    "headline": "Heatwave. Everyone cranks the AC. WATT laughs all the way to BANX.",
+    "emoji": "🥵",
+    "effects": [
+      { "target": { "ticker": "WATT" }, "pct": 0.08 },
+      { "target": { "ticker": "BANX" }, "pct": 0.02 }
+    ]
+  },
+  {
+    "id": "watt-storm",
+    "headline": "Storm knocks out WATT's biggest plant. Sparks fly, then don't.",
+    "emoji": "⛈️",
+    "effects": [{ "target": { "ticker": "WATT" }, "pct": -0.07 }]
+  },
+
+  {
+    "id": "market-regulator",
+    "headline": "Regulator dunks on a meme. Equities rattle on principle.",
     "emoji": "🏛️",
     "effects": [{ "target": "market", "pct": -0.04 }]
   },
   {
     "id": "market-rate-cut",
-    "headline": "Central bank surprise rate cut. Everyone parties.",
+    "headline": "Central bank surprise rate cut. Tickers throw a party.",
     "emoji": "🎉",
     "effects": [{ "target": "market", "pct": 0.05 }]
   },
   {
-    "id": "market-warm-cpi",
-    "headline": "CPI runs hot. Markets pretend to be calm.",
-    "emoji": "🥵",
+    "id": "market-cpi",
+    "headline": "CPI runs hot. The tape sweats. Indices wobble.",
+    "emoji": "🌡️",
     "effects": [{ "target": "market", "pct": -0.03 }]
   },
   {
-    "id": "market-good-jobs",
-    "headline": "Jobs report stunner. Indices stage a victory lap.",
+    "id": "market-jobs",
+    "headline": "Surprise jobs report. Wall Street finds its hat.",
     "emoji": "💼",
     "effects": [{ "target": "market", "pct": 0.04 }]
   },
   {
-    "id": "market-blackout",
-    "headline": "Exchange briefly halted by a squirrel chewing a cable.",
+    "id": "market-squirrel",
+    "headline": "Trading halted briefly by a squirrel chewing the main cable.",
     "emoji": "🐿️",
     "effects": [{ "target": "market", "pct": -0.02 }]
   },
   {
-    "id": "market-meme",
-    "headline": "Mystery TikTok dance pumps every consumer stock in sight.",
-    "emoji": "📱",
-    "effects": [
-      { "target": { "ticker": "FZZL" }, "pct": 0.05 },
-      { "target": { "ticker": "DRIP" }, "pct": 0.05 }
-    ]
-  },
-  {
-    "id": "market-rally",
-    "headline": "Analyst predicts 'vibes recession'. Stocks ironically rally.",
-    "emoji": "📈",
+    "id": "market-confidence",
+    "headline": "Consumer confidence ticks up. Everyone buys a fancy sandwich.",
+    "emoji": "🥪",
     "effects": [{ "target": "market", "pct": 0.03 }]
   },
   {
@@ -162,6 +204,25 @@
     "effects": [{ "target": "market", "pct": -0.05 }]
   },
   {
+    "id": "market-tech-rally",
+    "headline": "Whisper of an AI breakthrough. Tech jumps, telecoms tag along.",
+    "emoji": "🤖",
+    "effects": [
+      { "target": { "ticker": "BYTE" }, "pct": 0.06 },
+      { "target": { "ticker": "TLKR" }, "pct": 0.04 }
+    ]
+  },
+  {
+    "id": "market-commodity-bid",
+    "headline": "Commodity bid on every screen. Hard assets get a hug.",
+    "emoji": "🛢️",
+    "effects": [
+      { "target": { "ticker": "GOLD" }, "pct": 0.05 },
+      { "target": { "ticker": "WATT" }, "pct": 0.04 }
+    ]
+  },
+
+  {
     "id": "flavor-intern",
     "headline": "Intern leaves stove on at the NYSE. Trading continues.",
     "emoji": "🔥",
@@ -169,23 +230,30 @@
     "flavorOnly": true
   },
   {
-    "id": "flavor-pigeon",
+    "id": "flavor-pigeon-mascot",
     "headline": "Pigeon roosts on the bull statue. Becomes new index mascot.",
     "emoji": "🕊️",
     "effects": [],
     "flavorOnly": true
   },
   {
-    "id": "flavor-rooftop",
-    "headline": "Hedge fund holds yoga on the rooftop. Nobody is calmer.",
+    "id": "flavor-rooftop-yoga",
+    "headline": "Hedge fund holds rooftop yoga. Calm is at an all-time high.",
     "emoji": "🧘",
     "effects": [],
     "flavorOnly": true
   },
   {
-    "id": "flavor-cab",
+    "id": "flavor-taxi-tips",
     "headline": "Taxi driver gives stock tips. They are unfortunately correct.",
     "emoji": "🚕",
+    "effects": [],
+    "flavorOnly": true
+  },
+  {
+    "id": "flavor-pundit",
+    "headline": "TV pundit predicts a 'vibes recession'. Stocks ironically rally.",
+    "emoji": "📺",
     "effects": [],
     "flavorOnly": true
   }

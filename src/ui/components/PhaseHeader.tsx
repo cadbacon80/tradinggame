@@ -1,7 +1,12 @@
 import { useEffect, useState } from 'react';
 import type { Room } from '../../game/types';
 
-export function PhaseHeader({ room }: { room: Room }) {
+interface Props {
+  room: Room;
+  onHelp?: () => void;
+}
+
+export function PhaseHeader({ room, onHelp }: Props) {
   const [now, setNow] = useState(Date.now());
   useEffect(() => {
     const t = setInterval(() => setNow(Date.now()), 100);
@@ -25,8 +30,17 @@ export function PhaseHeader({ room }: { room: Room }) {
 
   return (
     <header className="sticky top-0 z-10 -mx-6 mb-4 flex items-center justify-between border-b border-slate-800 bg-slate-950 px-6 py-3">
-      <div className="tabular text-sm text-slate-400">
-        Round {room.round}/{room.config.totalRounds}
+      <div className="tabular flex items-center gap-2 text-sm text-slate-400">
+        <span>Round {room.round}/{room.config.totalRounds}</span>
+        {onHelp && (
+          <button
+            className="rounded-full bg-slate-800 px-2 text-xs text-slate-300"
+            onClick={onHelp}
+            aria-label="Help"
+          >
+            ?
+          </button>
+        )}
       </div>
       <div className={'rounded-full px-3 py-1 text-xs font-semibold ' + color}>
         {label.toUpperCase()}
