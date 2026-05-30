@@ -65,17 +65,21 @@ export function StockRow({ room, ticker, player, canTrade, onBuy, onSell, onInfo
         </button>
         <div className="text-right">
           <div className="tabular text-2xl font-bold">{price}</div>
-          <div className="tabular text-xs text-slate-500">
-            {held} sh
-            {delta !== 0 && (
-              <span className={delta > 0 ? 'text-green-400' : 'text-red-400'}>
-                {' · '}
-                {delta > 0 ? '▲' : '▼'} {Math.abs(delta)}
-              </span>
-            )}
-          </div>
+          {delta !== 0 && (
+            <div className={'tabular text-xs ' + (delta > 0 ? 'text-green-400' : 'text-red-400')}>
+              {delta > 0 ? '▲' : '▼'} {Math.abs(delta)}
+            </div>
+          )}
         </div>
       </div>
+      {held > 0 && (
+        <div className="flex items-center justify-between rounded-lg bg-slate-800/60 px-3 py-1.5 text-xs">
+          <span className="text-slate-400">You own</span>
+          <span className="tabular font-semibold text-slate-100">
+            {held} sh · {held * price}
+          </span>
+        </div>
+      )}
       <div className="flex gap-2">
         <button
           disabled={!canSell}

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useGame } from '../../state/gameStore';
 import { PhaseHeader } from '../components/PhaseHeader';
 import { NewsCard } from '../components/NewsCard';
+import { Portfolio } from '../components/Portfolio';
 import { StockRow } from '../components/StockRow';
 import { InsuranceCard } from '../components/InsuranceCard';
 import { Leaderboard } from '../components/Leaderboard';
@@ -38,6 +39,10 @@ export function Round() {
       <PhaseHeader room={room} onHelp={() => setShowHelp(true)} />
 
       <NewsCard items={room.market.currentNews} />
+
+      <div className="mt-3">
+        <Portfolio room={room} player={player} />
+      </div>
 
       {showTutorial && (
         <div className="mt-3 rounded-2xl border border-amber-400/40 bg-amber-400/5 p-3 text-sm leading-snug">

@@ -52,6 +52,14 @@ export function InsuranceCard({ room, player, canTrade, onBuy, onSell }: Props) 
       <div className={'text-xs ' + (open ? 'text-amber-300' : 'text-slate-500')}>
         {helper}
       </div>
+      {held > 0 && (
+        <div className="flex items-center justify-between rounded-lg bg-slate-800/60 px-3 py-1.5 text-xs">
+          <span className="text-slate-400">You hold</span>
+          <span className="tabular font-semibold text-slate-100">
+            {held} u · {held * price}
+          </span>
+        </div>
+      )}
       <div className="flex gap-2">
         <button
           disabled={!canSell}
