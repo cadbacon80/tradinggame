@@ -17,10 +17,10 @@ export function InsuranceCard({ room, player, canTrade, onBuy, onSell }: Props) 
 
   const upcoming = room.config.insuranceRounds.find((r) => r > room.round);
   const helper = open
-    ? 'Window is OPEN this round'
+    ? 'Shop is OPEN — you can buy or sell this round'
     : upcoming
-      ? `Window opens round ${upcoming}`
-      : 'No more windows this game';
+      ? `Shop opens round ${upcoming}`
+      : 'No more shop windows this game';
 
   return (
     <div
@@ -36,12 +36,12 @@ export function InsuranceCard({ room, player, canTrade, onBuy, onSell }: Props) 
           </span>
           <div>
             <div className="flex items-center gap-2">
-              <span className="font-bold tracking-wide">INS</span>
+              <span className="font-bold tracking-wide">SHIELD</span>
               <span className="rounded bg-slate-800 px-1.5 py-0.5 text-[10px] uppercase tracking-wider text-slate-400">
-                vol
+                hedge
               </span>
             </div>
-            <div className="text-xs text-slate-400">Pops on big swings</div>
+            <div className="text-xs text-slate-400">Pops when the market gets loud</div>
           </div>
         </div>
         <div className="text-right">

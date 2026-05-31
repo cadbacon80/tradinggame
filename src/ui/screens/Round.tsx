@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useGame } from '../../state/gameStore';
 import { PhaseHeader } from '../components/PhaseHeader';
 import { NewsCard } from '../components/NewsCard';
+import { MarketMood } from '../components/MarketMood';
 import { Portfolio } from '../components/Portfolio';
 import { StockRow } from '../components/StockRow';
 import { InsuranceCard } from '../components/InsuranceCard';
@@ -41,6 +42,10 @@ export function Round() {
       <NewsCard items={room.market.currentNews} />
 
       <div className="mt-3">
+        <MarketMood room={room} />
+      </div>
+
+      <div className="mt-3">
         <Portfolio room={room} player={player} />
       </div>
 
@@ -51,7 +56,8 @@ export function Round() {
             <li>News drops → wait → trading opens.</li>
             <li>Tap <span className="rounded bg-green-500 px-1.5 font-bold text-slate-950">BUY 5</span> to buy 5 shares, <span className="rounded bg-red-500 px-1.5 font-bold text-slate-50">SELL 5</span> to sell 5.</li>
             <li>You trade at the price shown. Prices update after the round.</li>
-            <li>Insurance (INS) goes up on any big move and bleeds in calm rounds.</li>
+            <li>🛡️ <b>SHIELD</b> goes up on any big move and bleeds in calm rounds — your hedge.</li>
+            <li>Watch the <b>market mood</b> and <b>whisper</b> above for hints.</li>
           </ul>
           <button
             className="mt-2 text-xs text-amber-300 underline"
@@ -197,15 +203,21 @@ export function Round() {
                 </p>
               </div>
               <div>
-                <div className="font-semibold text-slate-100">Insurance (INS)</div>
+                <div className="font-semibold text-slate-100">🛡️ SHIELD</div>
                 <p className="mt-1 text-slate-300">
-                  A volatility bet. It rises on any big move (up or down) and bleeds when the market is quiet. Only tradable on specific rounds — those rounds glow.
+                  Your hedge against big news. It goes up on any big market move (up or down) and bleeds when things are quiet. Only tradable on specific rounds — those rounds glow.
+                </p>
+              </div>
+              <div>
+                <div className="font-semibold text-slate-100">Market mood + whisper</div>
+                <p className="mt-1 text-slate-300">
+                  After each round, the market mood card sums up what just happened. The whisper hints at what sector might move next — direction is hidden, but it tells you where to look.
                 </p>
               </div>
               <div>
                 <div className="font-semibold text-slate-100">Winning</div>
                 <p className="mt-1 text-slate-300">
-                  After the final round, highest net worth (cash + your stocks + your INS) wins.
+                  After the final round, highest net worth (cash + stocks + SHIELD) wins.
                 </p>
               </div>
             </div>

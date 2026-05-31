@@ -76,7 +76,7 @@ export function Portfolio({ room, player }: Props) {
       {(positions.length > 0 || insUnits > 0) ? (
         <div className="mt-3 border-t border-slate-800 pt-3">
           <div className="mb-1 text-xs uppercase tracking-wider text-slate-500">
-            Positions · stocks {stockValue}{insUnits > 0 ? ` · ins ${insValue}` : ''}
+            Positions · stocks {stockValue}{insUnits > 0 ? ` · shield ${insValue}` : ''}
           </div>
           <ul className="flex flex-col gap-1">
             {positions.map((p) => (
@@ -93,8 +93,8 @@ export function Portfolio({ room, player }: Props) {
               <li className="flex items-center justify-between text-sm">
                 <span className="flex items-center gap-2">
                   <span className="text-base">🛡️</span>
-                  <span className="font-semibold tracking-wide">INS</span>
-                  <span className="text-slate-400">{insUnits} u × {insPrice}</span>
+                  <span className="font-semibold tracking-wide">SHIELD</span>
+                  <span className="text-slate-400">{insUnits} × {insPrice}</span>
                 </span>
                 <span className="tabular font-semibold text-slate-200">{insValue}</span>
               </li>
